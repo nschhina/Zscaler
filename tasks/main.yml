@@ -3,4 +3,4 @@
   when: ansible_os_family == 'Windows'
 
 - include_tasks: setup-Debian.yml
-  when: ansible_os_family == 'Darwin
+  when: ansible_os_family == 'Darwin'
