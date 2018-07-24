@@ -1,24 +1,19 @@
 ---
-dependencies: []
+dependencies:
+  - elliotweiser.osx-command-line-tools
 
 galaxy_info:
   author: nschhina
-  description: Qualys Cloud Agent for Windows/Mac/Linux.
+  description: Zscaler Cloud Proxyfor Windows/Mac
   company: ""
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
-  - name: EL
-    versions:
-    - 6
-    - 7
-  - name: Fedora
+  - name: Mac
     versions:
     - all
-  - name: Debian
-    versions:
-    - all
-  - name: Ubuntu
+    - any
+  - name: Windows
     versions:
     - all
   galaxy_tags:

@@ -1,0 +1,17 @@
+---
+- name: Check for existing Zscaler Agent installation.
+  win_stat:
+    path: "C:\\Program Files (x86)\\Zscaler"
+  register: nessus_installed
+- name: Download MSI to local directory.
+  win_get_url:
+    url: "https://raw.githubusercontent.com/nschhina/Zscaler-Cloud-Proxy/master/zscaler.msi"
+    dest: ~
+    force: no
+  ignore_errors: "{{ ansible_check_mode }}"
+- name: Install Zscaler Agent on the Windows
+    win_package:
+      path: '~'
+      productid: auto
+      state: present
+    ignore_errors: yes

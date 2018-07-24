@@ -1,0 +1,20 @@
+---
+- name: Check for existing Zscaler Agent installation.
+  stat:
+    path: /Applications/Zscaler.app
+  register: zscaler_installed
+
+- name: Download DMG package to local tmp.
+  get_url:
+    url: "https://github.com/nschhina/Zscaler-Cloud-Proxy/tree/master/zscaler.app"
+    dest: ~
+    force: no
+    mode: 644
+  become: no
+  ignore_errors: "{{ ansible_check_mode }}"
+
+- name: Install Zscaler Agent on the machine
+  shell: ~/zscaler.app/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+  args:
+    warn: no
+  when: zscaler_installed.stat.exists == False
