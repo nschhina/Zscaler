@@ -1,22 +1,22 @@
 ---
 dependencies:
-  - elliotweiser.osx-command-line-tools
+  - osx-command-line-tools
 
 galaxy_info:
   author: nschhina
   description: Zscaler Cloud Proxy for Windows/Mac
   company: ""
-  license: "license (BSD, MIT)"
+  license: MIT
   min_ansible_version: 2.4
   platforms:
   - name: Mac
     versions:
-    - 10.11
-    - 10.12
+    - all
+    - any
   - name: Windows
     versions:
     - all
   galaxy_tags:
     - security
     - system
-    - server
+    - networking

@@ -1,6 +1,6 @@
 ---
-- include_tasks: setup-RedHat.yml
+- include_tasks: setup-Windows.yml
   when: ansible_os_family == 'Windows'
 
-- include_tasks: setup-Debian.yml
+- include_tasks: setup-Darwin.yml
   when: ansible_os_family == 'Darwin'
