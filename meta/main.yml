@@ -11,8 +11,8 @@ galaxy_info:
   platforms:
   - name: Mac
     versions:
-    - all
-    - any
+    - 10.11
+    - 10.12
   - name: Windows
     versions:
     - all
