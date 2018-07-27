@@ -4,3 +4,23 @@ zscaler_mac_dest: "~"
 zscaler_windows_dest: "C:\\Downloads"
 zscaler_windows_msi: ""
 zscaler_mac_app: ""
+
+## Install Mac Options
+install_mode: unattended
+install_unattendedmodeui: none
+install_-hideAppUIOnLaunch: 0
+install_strictEnforcement: 0
+install_reinstallDriver: 0
+install_policyToken: ""
+install_cloudName: ""
+install_deviceToken: ""
+install_userDomain: ""
+
+## Install Windows Options
+install_win_CLOUDNAME: ""
+install_win_DEVICETOKEN: ""
+install_win_HIDEAPPUIONLAUNCH: 0
+install_win_POLICYTOKEN: ""
+install_win_REINSTALLDRIVER: 0
+install_win_STRICTENFORCEMENT: 0
+install_win_USERDOMAIN: ""

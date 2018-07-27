@@ -4,7 +4,7 @@ dependencies:
 
 galaxy_info:
   author: nschhina
-  description: Zscaler Cloud Proxyfor Windows/Mac
+  description: Zscaler Cloud Proxy for Windows/Mac
   company: ""
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4

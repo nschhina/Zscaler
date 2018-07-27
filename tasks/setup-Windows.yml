@@ -16,4 +16,12 @@
       path: "{{ zscaler_windows_dest }}"
       productid: auto
       state: present
+      arguments:
+      - CLOUDNAME="{{install_win_CLOUDNAME}}"
+      - DEVICETOKEN="{{install_win_DEVICETOKEN}}"
+      - HIDEAPPUIONLUNCH="{{install_win_HIDEAPPUIONLUNCH}}"
+      - POLICYTOKEN="{{install_win_POLICYTOKEN}}"
+      - REINSTALLDRIER="{{install_win_REINSTALLDRIER}}"
+      - STRICTENFORCMENT="{{install_win_STRICTENFORCMENT}}"
+      - USERDOMAIN="{{install_win_USERDOMAIN}}"
     ignore_errors: "{{ ansible_check_mode }}"

@@ -14,7 +14,7 @@
   ignore_errors: "{{ ansible_check_mode }}"
 
 - name: Install Zscaler Agent on the machine
-  shell: "{{ zscaler_mac_dest }}"/zscaler.app/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+  shell: "{{ zscaler_mac_dest }}"/zscaler.app/MacOS/installbuilder.sh --mode "{{ install_mode }}"" --unattendedmodeui "{{ install_unattendedmodeui }}" -hideAppUIOnLaunch "{{ install_-hideAppUIOnLaunch }}" --strictEnforcement "{{ install_strictEnforcement }}" --reinstallDriver "{{ install_reinstallDriver }}" --policyToken "{{ install_policyToken }}" --userDomain "{{ install_userDomain }}" --deviceToken "{{ install_deviceToken }}" --cloudName "{{ install_cloudName }}"
   args:
     warn: no
   when: zscaler_installed.stat.exists == False
